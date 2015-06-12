@@ -1,0 +1,74 @@
+/***** POSSIBLE COLOR PALETTE *****
+maroon: #8b575c
+teal: #216869
+green: #49a078
+cream: #e0dee2
+gray: #8baaad
+**********************************/
+
+
+/**:not(hr):not(body):not(html) {
+    box-sizing: border-box;
+    border: 1px dashed #000;
+}
+.columns {
+    min-height: 100px;
+}*/
+
+
+/***** OVERALL *****/
+body {
+	background-color: #fff;
+    margin: 0px;
+}
+.full-width {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    width: 100%;
+}
+#menu {
+    background-color: #ccc;
+    text-align: center;
+}
+.sub-nav dd.active a {
+    background-color: #49a078;
+}
+
+
+/***** BODY *****/
+#page-header {
+    background-color: #fff;
+    color: #8b575c;
+    font-size: 2.5em;
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+}
+#page-footer {
+    background-color: #fff;
+    padding: 50px 0px 50px 0px;
+}
+.even {
+    background-color: #e0dee2;
+}
+.odd {
+    background-color: #fff;
+}
+.section {
+    padding: 40px 0px 40px 0px;
+}
+.section-header {
+    font-size: 1.8em;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.section-content {
+    font-size: 1.1em;
+}
+#survey-button {
+    text-align: center;
+}
+.team-content {
+    font-size: 1.1em;
+    text-align: center;
+}
