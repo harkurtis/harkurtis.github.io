@@ -2,11 +2,106 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Harkurtis Mobile Systems</title>
         
-        <link>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="foundation-5.5.2/css/normalize.css">
+        <link rel="stylesheet" href="foundation-5.5.2/css/foundation.min.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="tooltipster-master/css/tooltipster.css">
+        <link rel="stylesheet" type="text/css" href="main_styles.css">
+        
+        <!-- JS -->
+        <script src="foundation-5.5.2/js/vendor/jquery.js"></script>
+        <script src="foundation-5.5.2/js/foundation/foundation.js"></script>
+        <script src="foundation-5.5.2/js/foundation/foundation.magellan.js"></script>
+        <script type="text/javascript" src="tooltipster-master/js/jquery.tooltipster.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(document).foundation();
+                $(document).foundation({
+                    "magellan-expedition": {
+                        active_class: 'active', // specify the class used for active sections
+                        threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
+                        destination_threshold: 40, // pixels from the top of destination for it to be considered active
+                        throttle_delay: 50, // calculation throttling to increase framerate
+                        fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
+                        offset_by_height: true // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
+                    }
+                });
+                $(document).foundation('magellan', 'reflow');
+            });
+        </script>
     </head>
     <body>
-        <div>Hey Ty and Willis</div>
-        <div>(New website goes here)</div>
+        <div class="row full-width">
+            <div data-magellan-expedition="fixed" id="menu">
+                <dl class="sub-nav">
+                    <dd data-magellan-arrival="survey"><a href="#survey">Survey</a></dd>
+                    <dd data-magellan-arrival="about"><a href="#about">About</a></dd>
+                    <dd data-magellan-arrival="team"><a href="#team">Our Team</a></dd>
+                    <dd data-magellan-arrival="contact"><a href="#contact">Contact Us</a></dd>
+                </dl>
+            </div>
+        </div>
+        <header id="page-header">
+            <div class="row">
+                <div class="large-12 columns">
+                    Harkurtis Mobile Systems
+                </div>
+            </div>
+        </header>
+        <div class="row full-width">
+            <div class="row even">
+                <div class="large-2 columns">&nbsp;</div>
+                <div class="large-8 columns section">
+                    <a name="survey" data-magellan-destination="survey"></a>
+                    <div class="section-header">Want to help us improve campus security?</div>
+                    <div class="section-content">If you have a couple of minutes to spare, please take our eight question survey! It will help us get a better idea of how students and staff feel about their campus' security.</div>
+                    <div id="survey-button">
+                        <button type="button">Take Survey</button>
+                    </div>
+                </div>
+                <div class="large-2 columns">&nbsp;</div>
+            </div>
+            <div class="row odd">
+                <div class="large-2 columns">&nbsp;</div>
+                <div class="large-8 columns section">
+                    <a name="about" data-magellan-destination="about"></a>
+                    <div class="section-header">About Harkurtis</div>
+                </div>
+                <div class="large-2 columns">&nbsp;</div>
+            </div>
+            <div class="row even">
+                <div class="large-2 columns">&nbsp;</div>
+                <div class="large-8 columns section">
+                    <a name="team" data-magellan-destination="team"></a>
+                    <div class="section-header">Our Team</div>
+                    <div class="row team-content">
+                        <div class="large-4 columns">Tyler "Squealin' Hog" Hartney</div>
+                        <div class="large-4 columns">Matt "Wong Wang" Willis</div>
+                        <div class="large-4 columns">Austin "Gayhawk" Kurtti</div>
+                    </div>
+                </div>
+                <div class="large-2 columns">&nbsp;</div>
+            </div>
+            <div class="row odd">
+                <div class="large-2 columns">&nbsp;</div>
+                <div class="large-8 columns section">
+                    <a name="contact" data-magellan-destination="contact"></a>
+                    <div class="section-header">Contact Us</div>
+                    <div class="section-content">Want to get ahold of us? If so, please use our <a>contact form</a> to submit any questions or comments you have. You can also click on any of our social media links to stay connected with us through Facebook and Twitter.</div>
+                </div>
+                <div class="large-2 columns">&nbsp;</div>
+            </div>
+        </div>
+        <footer id="page-footer">
+            <div class="row">
+                <div class="large-12 columns">
+                    Page Footer
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
