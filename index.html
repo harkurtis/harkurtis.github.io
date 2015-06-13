@@ -8,15 +8,19 @@
         <link rel="stylesheet" href="foundation-5.5.2/css/normalize.css">
         <link rel="stylesheet" href="foundation-5.5.2/css/foundation.min.css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
         <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="tooltipster-master/css/tooltipster.css">
+        <link rel="stylesheet" href="slick-1.5.0/slick-1.5.0/slick/slick.css">
+        <link rel="stylesheet" href="slick-1.5.0/slick-1.5.0/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="main_styles.css">
         
         <!-- JS -->
-        <script src="foundation-5.5.2/js/vendor/jquery.js"></script>
-        <script src="foundation-5.5.2/js/foundation/foundation.js"></script>
-        <script src="foundation-5.5.2/js/foundation/foundation.magellan.js"></script>
+        <script type="text/javascript" src="foundation-5.5.2/js/vendor/jquery.js"></script>
+        <script type="text/javascript" src="foundation-5.5.2/js/foundation/foundation.js"></script>
+        <script type="text/javascript" src="foundation-5.5.2/js/foundation/foundation.magellan.js"></script>
         <script type="text/javascript" src="tooltipster-master/js/jquery.tooltipster.min.js"></script>
+        <script type="text/javascript" src="slick-1.5.0/slick-1.5.0/slick/slick.min.js"></script>
         <script>
             $(document).ready(function() {
                 $(document).foundation();
@@ -24,13 +28,27 @@
                     "magellan-expedition": {
                         active_class: 'active', // specify the class used for active sections
                         threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
-                        destination_threshold: 100, // pixels from the top of destination for it to be considered active
+                        destination_threshold: 300, // pixels from the top of destination for it to be considered active
                         throttle_delay: 50, // calculation throttling to increase framerate
                         fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
                         offset_by_height: true // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
                     }
                 });
                 $(document).foundation('magellan', 'reflow');
+                
+                $('#carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
+                
+                $('#to-top').click(function() {
+                    $('html, body').animate({
+                        scrollTop: $('#page-header').offset().top - 80
+                    }, 1000);
+                });
             });
         </script>
     </head>
@@ -47,8 +65,15 @@
         </div>
         <header id="page-header">
             <div class="row">
-                <div class="large-12 columns">
-                    Harkurtis Mobile Systems
+                <div class="large-12 columns" id="carousel">
+                    <div>
+                        <span class="carousel-header">Harkurtis Mobile Systems</span><br>
+                        <span class="carousel-subheader">Part Integration. Part Innovation.</span>
+                    </div>
+                    <div>
+                        <span class="carousel-header">SmartPath</span><br>
+                        <span class="carousel-subheader sliderline">The safety app for universities. <a>Learn More</a></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -70,6 +95,7 @@
                 <div class="large-8 columns section">
                     <a name="about" data-magellan-destination="about"></a>
                     <div class="section-header">About Harkurtis</div>
+                    <div class="section-content">We are a team of long time friends and college students looking to help make the university community a safer place. As members of this community ourselves, we have a special desire for the safety of people on and around college campuses everywhere. Made up from different college backgrounds, each of us brings something unique to our team. We are committed to tackling challenging problems and providing solutions to help ensure everyone can feel safe on and around campus, no matter the time.</div>
                 </div>
                 <div class="large-2 columns">&nbsp;</div>
             </div>
@@ -80,18 +106,21 @@
                     <div class="section-header">Our Team</div>
                     <div class="row team-content">
                         <div class="large-4 columns">
+                            <img class="team-image" src="https://media.licdn.com/media/p/3/005/09e/0f5/2c9b2ee.jpg"/><br>
                             <span class="team-name">Tyler Hartney</span><br><span class="team-info">Chief Executive Officer<br>University of Minnesota</span>
                             <div class="team-icons">
-                                <a href="" target="_blank"><i class="fa fa-linkedin fa-2x team-icon"></i></a>
+                                <a href="https://www.linkedin.com/in/tylerwalterhartney" target="_blank"><i class="fa fa-linkedin fa-2x team-icon"></i></a>
                             </div>
                         </div>
                         <div class="large-4 columns">
+                            <img class="team-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAACDAAAAJDc0N2I5ZDc0LTgxMDAtNDY0OC05YmZhLTNhY2FmYmM4Y2EyNA.jpg"/><br>
                             <span class="team-name">Matt Willis</span><br><span class="team-info">Chief Operating Officer<br>University of St. Thomas</span>
                             <div class="team-icons">
-                                <a href="" target="_blank"><i class="fa fa-linkedin fa-2x team-icon"></i></a>
+                                <a href="https://www.linkedin.com/pub/matt-willis/94/a70/179" target="_blank"><i class="fa fa-linkedin fa-2x team-icon"></i></a>
                             </div>
                         </div>
                         <div class="large-4 columns">
+                            <img class="team-image" src="https://media.licdn.com/media/p/1/000/25b/0e5/2ad376b.jpg"/><br>
                             <span class="team-name">Austin Kurtti</span><br><span class="team-info">Chief Technology Officer<br>University of Kansas</span>
                             <div class="team-icons">
                                 <a href="https://www.linkedin.com/in/austinkurtti" target="_blank"><i class="fa fa-linkedin fa-2x team-icon"></i></a>
@@ -116,7 +145,12 @@
         <footer id="page-footer">
             <div class="row">
                 <div class="large-12 columns">
-                    Page Footer
+                    Icons by Font Awesome, version 4.3.0
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns sliderline" id="to-top">
+                    <a>Back to top</a>
                 </div>
             </div>
         </footer>

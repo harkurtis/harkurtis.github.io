@@ -2,7 +2,7 @@
 maroon: #8b575c
 teal: #216869
 green: #43ac6a
-cream: #e0dee2
+silver: #e0dee2
 slate: #8baaad
 
 gray: #737373
@@ -25,6 +25,10 @@ body {
     font-family: 'Roboto', Tahoma, sans-serif;
     margin: 0px;
 }
+ul {
+    margin-bottom: 0em;
+    margin-left: 0em;
+}
 .full-width {
     margin-left: auto;
     margin-right: auto;
@@ -36,6 +40,9 @@ body {
     text-align: center;
 }
 .sub-nav dd.active a {
+    background-color: #43ac6a;
+}
+.sub-nav dd.active a:hover {
     background-color: #43ac6a;
 }
 .sliderline > a {
@@ -75,20 +82,31 @@ body {
 
 /***** HEADER/FOOTER *****/
 #page-header {
-/*    background-color: #fff;*/
+    background-color: #555;
+/*
     background: -webkit-linear-gradient(left top, #444, #777);
     background: -moz-linear-gradient(bottom right, #444, #777);
     background: -ms-linear-gradient(bottom right, #444, #777);
     background: -o-linear-gradient(bottom right, #444, #777);
     background: linear-gradient(to bottom right, #444, #555);
+*/
     color: #fff;
-    font-size: 2.5em;
     padding: 50px 0px 50px 0px;
     text-align: center;
 }
+.carousel-header {
+    font-family: 'Ubuntu', 'Roboto', Tahoma, sans-serif;
+    font-size: 2.8em;
+}.carousel-subhader {
+    font-size: 1.8em;
+}
 #page-footer {
-    background-color: #fff;
+    background-color: #555;
+    color: #fff;
     padding: 50px 0px 50px 0px;
+}
+#to-top {
+    text-align: right;
 }
 
 
@@ -100,15 +118,15 @@ body {
     background-color: #fff;
 }
 .section {
-    padding: 40px 0px 40px 0px;
+    padding: 70px 0px 70px 0px;
 }
 .section-header {
-    font-size: 1.8em;
+    font-size: 2em;
     text-align: center;
     padding-bottom: 40px;
 }
 .section-content {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 #survey-button {
     padding-top: 10px;
@@ -131,4 +149,13 @@ body {
 }
 .team-icon {
     margin: 0px 10px 0px 10px;
+}
+.team-image {
+    height: 150px;
+    width: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+    border-radius: 150px;
 }
