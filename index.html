@@ -18,49 +18,27 @@
         <!-- JS -->
         <script type="text/javascript" src="foundation-5.5.2/js/vendor/jquery.js"></script>
         <script type="text/javascript" src="foundation-5.5.2/js/foundation/foundation.js"></script>
-        <script type="text/javascript" src="foundation-5.5.2/js/foundation/foundation.magellan.js"></script>
+        <script type="text/javascript" src="foundation-5.5.2/js/foundation.min.js"></script>
         <script type="text/javascript" src="tooltipster-master/js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="slick-1.5.0/slick-1.5.0/slick/slick.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $(document).foundation();
-                $(document).foundation({
-                    "magellan-expedition": {
-                        active_class: 'active', // specify the class used for active sections
-                        threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
-                        destination_threshold: 300, // pixels from the top of destination for it to be considered active
-                        throttle_delay: 50, // calculation throttling to increase framerate
-                        fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
-                        offset_by_height: true // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
-                    }
-                });
-                $(document).foundation('magellan', 'reflow');
-                
-                $('#carousel').slick({
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    autoplay: true,
-                    autoplaySpeed: 5000
-                });
-                
-                $('#to-top').click(function() {
-                    $('html, body').animate({
-                        scrollTop: $('#page-header').offset().top - 80
-                    }, 1000);
-                });
-            });
-        </script>
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <div class="row full-width">
             <div data-magellan-expedition="fixed" id="menu">
-                <dl class="sub-nav">
+                <dl class="sub-nav show-for-medium-up">
                     <dd data-magellan-arrival="survey"><a href="#survey">Survey</a></dd>
                     <dd data-magellan-arrival="about"><a href="#about">About</a></dd>
                     <dd data-magellan-arrival="team"><a href="#team">Our Team</a></dd>
                     <dd data-magellan-arrival="contact"><a href="#contact">Contact Us</a></dd>
                 </dl>
+                <button href="#" data-dropdown="drop-menu" aria-controls="drop-menu" aria-expanded="false" class="button success show-for-small"><i class="fa fa-bars fa-1x" id="drop-menu-icon"></i></button>
+                <ul id="drop-menu" class="f-dropdown" data-dropdown-content aria-hidden="true">
+                    <li><a href="#survey">Survey</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
             </div>
         </div>
         <header id="page-header">
@@ -137,7 +115,7 @@
                 <div class="large-8 columns section">
                     <a name="contact" data-magellan-destination="contact"></a>
                     <div class="section-header">Contact Us</div>
-                    <div class="section-content sliderline">Want to get ahold of us? If so, please use our <a>contact form</a> to submit any questions or comments you have. You can also click on any of our social media links to stay connected with us through Facebook and Twitter.</div>
+                    <div class="section-content sliderline">Want to get ahold of the Harkurtis team? If so, please use our <a>contact form</a> to submit any questions or comments you have. You can also use any of our social media links below to stay connected!</div>
                 </div>
                 <div class="large-2 columns">&nbsp;</div>
             </div>

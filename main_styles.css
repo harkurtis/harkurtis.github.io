@@ -35,15 +35,14 @@ ul {
     max-width: initial;
     width: 100%;
 }
-#menu {
-    background-color: #ccc;
-    text-align: center;
-}
 .sub-nav dd.active a {
     background-color: #43ac6a;
 }
 .sub-nav dd.active a:hover {
     background-color: #43ac6a;
+}
+.button {
+    margin-bottom: 0px;
 }
 .sliderline > a {
     color: #008cba;
@@ -64,11 +63,11 @@ ul {
     -ms-transform: scaleX(0);
     -o-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.3 ease-in-out 0s;
-    -moz-transition: all 0.3 ease-in-out 0s;
-    -ms-transition: all 0.3 ease-in-out 0s;
-    -o-transition: all 0.3 ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
 }
 .sliderline > a:hover:before {
     visibility: visible;
@@ -91,8 +90,15 @@ ul {
     background: linear-gradient(to bottom right, #444, #555);
 */
     color: #fff;
-    padding: 50px 0px 50px 0px;
+    padding: 100px 0px 100px 0px;
     text-align: center;
+}
+#menu {
+    background-color: #ccc;
+    text-align: center;
+}
+#drop-menu-icon {
+    color: #fff;
 }
 .carousel-header {
     font-family: 'Ubuntu', 'Roboto', Tahoma, sans-serif;
